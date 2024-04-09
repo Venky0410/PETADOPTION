@@ -1,0 +1,5 @@
+branch-defaults:
+  main:
+    environment: x23180871-PET-ADOPTION-env
+global:
+  profile: null
