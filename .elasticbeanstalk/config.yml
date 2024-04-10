@@ -1,5 +1,22 @@
 branch-defaults:
   main:
     environment: x23180871-PET-ADOPTION-env
+    group_suffix: null
+environment-defaults:
+  x23180871-PET-ADOPTION-env:
+    branch: null
+    repository: null
 global:
+  application_name: x23180871_PET_ADOPTION
+  branch: null
+  default_ec2_keyname: null
+  default_platform: Python 3.11
+  default_region: eu-north-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
   profile: null
+  repository: null
+  sc: git
+  workspace_type: Application

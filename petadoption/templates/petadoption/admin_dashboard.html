@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/admin_dashboard.css' %}">
+</head>
+<body>
+    <h1>Admin Dashboard - Animal List</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Species</th>
+                <th>Breed</th>
+                <th>Age</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for animal in animals %}
+            <tr>
+                <td>{{ animal.name }}</td>
+                <td>{{ animal.species }}</td>
+                <td>{{ animal.breed }}</td>
+                <td>{{ animal.age }}</td>
+                <td>{{ animal.description }}</td>
+                <td>
+                    {% if animal.image %}
+                        <img src="{{ animal.image.url }}" alt="{{ animal.name }}" class="animal-image">
+                    {% else %}
+                        No image available
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{% url 'edit_animal' animal.id %}">Edit</a> | 
+                    <a href="#" onclick="confirmDelete('{{ animal.name }}', {{ animal.id }})">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'add_animal' %}">Add New Animal</a>
+    <script src="{% static 'js/admin_dashboard.js' %}"></script>
+</body>
+</html>

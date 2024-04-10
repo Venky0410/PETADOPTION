@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats - Pet Adoption Portal</title>
+    <link rel="stylesheet" href="{% static 'css/petpage.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Cats Available for Adoption</h1>
+        <ul class="pet-list">
+            {% for cat in cats_data %}
+                <li class="pet-item">
+                    <h2>{{ cat.name }}</h2>
+                    <div class="pet-details">
+                        <p><strong>Age:</strong> {{ cat.age }}</p>
+                        <p><strong>Breed:</strong> {{ cat.breed }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

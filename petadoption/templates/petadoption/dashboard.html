@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Portal</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Pet Adoption Portal</h1>
+        {% include 'petadoption/navigation.html' %}
+    </header>
+    <main>
+        <section class="jumbotron">
+            <h2>Welcome to the Pet Adoption Portal!</h2>
+            <p>Find your new furry friend today.</p>
+            <a href="{% url 'login' %}" class="btn">Login</a>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Pet Adoption Portal. All rights reserved.</p>
+    </footer>
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>
+

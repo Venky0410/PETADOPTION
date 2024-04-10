@@ -1,0 +1,34 @@
+/* home.css */
+
+/* You can add your CSS styles here to customize the appearance of your home page */
+/* For example, you can style elements, apply layouts, etc. */
+
+/* Example: Style for the jumbotron */
+.jumbotron {
+    background-color: #f8f9fa;
+    padding: 50px;
+}
+
+/* Example: Style for the card */
+.card {
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+/* Example: Style for the card image */
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Example: Style for the card title */
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+/* Example: Style for the card text */
+.card-text {
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dogs.css' %}">
+</head>
+<body>
+    <h1>Animals</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Age</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for animal in animals_data %}
+            <tr>
+                <td>{{ animal.name }}</td>
+                <td>{{ animal.breed }}</td>
+                <td>{{ animal.age }}</td>
+                <td>{{ animal.description }}</td>
+                <td>
+                    {% if animal.image %}
+                        <img src="{{ animal.image.url }}" alt="{{ animal.name }}" class="animal-image">
+                    {% else %}
+                        No image available
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

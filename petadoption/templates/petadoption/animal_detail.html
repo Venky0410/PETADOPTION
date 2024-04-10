@@ -1,0 +1,20 @@
+<!-- animal_detail.html -->
+
+{% extends 'petadoption/base.html' %}
+
+{% block title %}Animal Detail - Pet Adoption Portal{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="card mb-4">
+        <img class="card-img-top" src="{{ animal.image.url }}" alt="{{ animal.name }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ animal.name }}</h5>
+            <p class="card-text">{{ animal.description }}</p>
+            <p class="card-text">Age: {{ animal.age }}</p>
+            <p class="card-text">Species: {{ animal.species }}</p>
+            <!-- Add more details as needed -->
+        </div>
+    </div>
+</div>
+{% endblock %}
